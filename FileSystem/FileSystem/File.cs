@@ -94,6 +94,7 @@ namespace FileSystem
 
         public string getPath()
         {
+            // je sauvegarde la variable parent du file en utilisant une autre variable parent2
             string path = this.Name;
             File parent2 = Parent;
             while (parent2 != null)
@@ -106,11 +107,13 @@ namespace FileSystem
 
         public string getRoot()
         {
+            // je sauvegarde la variable parent du file en utilisant une autre variable parent2
             string root = " ";
-            while (Parent.Name != "C:")
+            File parent2 = Parent;
+            while (parent2.Name != "C:")
             {
-                root = Parent.Name;
-                Parent = Parent.Parent;
+                root = parent2.Name;
+                parent2 = parent2.Parent;
             }
             return root;
         }

@@ -16,7 +16,7 @@ namespace FileSystem
             Directory racine = new Directory("C:", null);
             bool exit = false;
             File fileCurrent = racine;
-            int result;
+          
 
             string[] listCommand;
 
