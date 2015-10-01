@@ -36,7 +36,5 @@ namespace UnitTestCreateFile
             dossier.createNewFile("hui");
             Assert.AreEqual(dossier.ListFile[0].cd("hui"), null);
         }
-
-
     }
 }

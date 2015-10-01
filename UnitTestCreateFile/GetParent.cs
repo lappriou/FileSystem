@@ -13,8 +13,8 @@ namespace UnitTestCreateFile
 
             Directory dossier = new Directory("dossier", null);
             dossier.chmod(7);
-            File file = new File("moi", dossier);
-            Assert.AreEqual(file.getParent(), "dossier");
+            dossier.createNewFile("hui");
+            Assert.AreEqual(dossier.ListFile[0].getParent(), dossier);
         }
 
     }
