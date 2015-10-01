@@ -37,6 +37,16 @@ namespace UnitTestCreateFile
             Assert.IsFalse(dossier.createNewFile("hui"));
         }
 
+        public void MkdirByDirectoryAddList()
+        {
+            Directory dossier = new Directory("dossier", null);
+            dossier.createNewFile("hui");
+            dossier.chmod(7);
+            Assert.AreEqual(dossier.ListFile, 1);
+        }
+
+
+
 
     }
 }
