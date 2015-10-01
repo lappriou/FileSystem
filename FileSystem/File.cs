@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FileSystem
 {
-    class File
+    public class File
     {
         public string Name; 
         public int Permission;
