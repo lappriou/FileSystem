@@ -13,5 +13,13 @@ namespace UnitTestCreateFile
 
             Assert.IsFalse(file.isDirectory());
         }
+
+        [TestMethod]
+        public void FileIsFile()
+        {
+            File file = new File("moi", null);
+
+            Assert.IsTrue(file.isFile());
+        }
     }
 }
