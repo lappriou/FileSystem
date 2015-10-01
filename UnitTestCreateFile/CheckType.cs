@@ -22,6 +22,7 @@ namespace UnitTestCreateFile
             Assert.IsTrue(file.isFile());
         }
 
+        [TestMethod]
         public void DirectoryIsDirectory()
         {
             Directory dossier = new Directory("moi", null);
