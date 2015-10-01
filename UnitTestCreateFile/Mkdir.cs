@@ -29,6 +29,14 @@ namespace UnitTestCreateFile
             Assert.IsFalse(dossier.createNewFile("hui"));
         }
 
+        [TestMethod]
+        public void MkdirByDirectoryWithExistName()
+        {
+            Directory dossier = new Directory("dossier", null);
+            dossier.createNewFile("hui");
+            Assert.IsFalse(dossier.createNewFile("hui"));
+        }
+
 
     }
 }
