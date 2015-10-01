@@ -56,7 +56,12 @@ namespace FileSystem
 
         public override List<File> ls()
         {
-            return this.ListFile;
+            if (this.canRead())
+            {
+                return this.ListFile;
+            }
+            else
+                return null;
         }
 
         public override bool isFile()
