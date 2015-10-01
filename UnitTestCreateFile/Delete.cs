@@ -14,5 +14,15 @@ namespace UnitTestCreateFile
             File file = new File("file",null);
             Assert.IsFalse(file.delete("file"));
         }
+
+        [TestMethod]
+        public void DeleteByDirectoryNameNoExist()
+        {
+
+            Directory dossier = new Directory("dossier", null);
+            dossier.mkdir("hui");
+            dossier.chmod(7);
+            Assert.IsFalse(dossier.delete("huit"));
+        }
     }
 }
