@@ -57,6 +57,7 @@
     <Compile Include="Mkdir.cs" />
     <Compile Include="GetParent.cs" />
     <Compile Include="Cd.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FileSystem\FileSystem.csproj">
