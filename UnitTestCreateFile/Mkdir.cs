@@ -22,5 +22,13 @@ namespace UnitTestCreateFile
             dossier.chmod(7);
             Assert.IsTrue(dossier.createNewFile("hui"));
         }
+
+        public void MkdirByDirectoryNoPermit()
+        {
+            Directory dossier = new Directory("dossier", null);
+            Assert.IsFalse(dossier.createNewFile("hui"));
+        }
+
+
     }
 }
