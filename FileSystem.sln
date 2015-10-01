@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystem", "FileSystem\Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestCreateFile", "UnitTestCreateFile\UnitTestCreateFile.csproj", "{45A0D7B7-E5AE-4EF5-8620-9FC9F385EF07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestCreateParDirectory", "UnitTestCreateParDirectory\UnitTestCreateParDirectory.csproj", "{A1D90F7A-E6D1-4419-80FE-DE44158079D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{45A0D7B7-E5AE-4EF5-8620-9FC9F385EF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A0D7B7-E5AE-4EF5-8620-9FC9F385EF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A0D7B7-E5AE-4EF5-8620-9FC9F385EF07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D90F7A-E6D1-4419-80FE-DE44158079D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D90F7A-E6D1-4419-80FE-DE44158079D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D90F7A-E6D1-4419-80FE-DE44158079D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D90F7A-E6D1-4419-80FE-DE44158079D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
