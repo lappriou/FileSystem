@@ -8,8 +8,12 @@ namespace UnitTestCreateFile
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void LsByFile()
         {
+            Directory dossier = new Directory("dossier", null);
+            dossier.chmod(7);
+            dossier.createNewFile("hui");
+            Assert.AreEqual(dossier.ListFile[0].ls(), null);
         }
     }
 }
