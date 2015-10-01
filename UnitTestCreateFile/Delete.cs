@@ -24,5 +24,14 @@ namespace UnitTestCreateFile
             dossier.chmod(7);
             Assert.IsFalse(dossier.delete("huit"));
         }
+
+        public void DeleteByDirectory()
+        {
+
+            Directory dossier = new Directory("dossier", null);
+            dossier.mkdir("hui");
+            dossier.chmod(7);
+            Assert.IsTrue(dossier.delete("hui"));
+        }
     }
 }
