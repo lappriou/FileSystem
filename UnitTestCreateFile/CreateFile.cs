@@ -18,25 +18,35 @@ namespace UnitTestCreateFile
         [TestMethod]
         public void CreateNewFileByDirectory()
         {
-            Directory dossier = new Directory("dossier", null);
-            dossier.chmod(7);
-            Assert.IsTrue(dossier.createNewFile("hui"));
+            Directory dossier1 = new Directory("dossier", null);
+            dossier1.chmod(7);
+            Assert.IsTrue(dossier1.createNewFile("hui"));
         }
 
         [TestMethod]
         public void CreateNewFileByDirectoryWithExistName()
         {
-            Directory dossier = new Directory("dossier", null);
-            dossier.chmod(7);
-            dossier.createNewFile("hui");
-            Assert.IsFalse(dossier.createNewFile("hui"));
+            Directory dossier2 = new Directory("dossier", null);
+            dossier2.chmod(7);
+            dossier2.createNewFile("hui");
+            Assert.IsFalse(dossier2.createNewFile("hui"));
         }
 
         [TestMethod]
         public void CreateNewFileByDirectoryNoPermit()
         {
-            Directory dossier = new Directory("dossier", null);
-            Assert.IsFalse(dossier.createNewFile("hui"));
+            Directory dossier3 = new Directory("dossier", null);
+            Assert.IsFalse(dossier3.createNewFile("hui"));
         }
+
+        public void CreateNewFileByDirectoryAddList()
+        {
+            Directory dossier4 = new Directory("dossier", null);
+            dossier4.chmod(7);
+            dossier4.createNewFile("hui");
+            Assert.AreEqual(dossier4.ListFile.Count, 1);
+        }
+
+
     }
 }
