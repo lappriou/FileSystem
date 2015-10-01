@@ -59,6 +59,7 @@
     <Compile Include="Cd.cs" />
     <Compile Include="Ls.cs" />
     <Compile Include="GetPath.cs" />
+    <Compile Include="GetRoot.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FileSystem\FileSystem.csproj">
