@@ -33,5 +33,15 @@ namespace UnitTestCreateFile
             dossier.chmod(7);
             Assert.IsTrue(dossier.delete("hui"));
         }
+
+        public void DeleteByDirectoryDeleteList()
+        {
+
+            Directory dossier = new Directory("dossier", null);
+            dossier.mkdir("hui");
+            dossier.chmod(7);
+            dossier.delete("hui");
+            Assert.AreEqual(dossier.ListFile.Count, 0);
+        }
     }
 }
