@@ -1,14 +1,17 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using FileSystem;
 namespace UnitTestCreateFile
 {
     [TestClass]
-    public class UnitTest1
+    public class CheckType
     {
         [TestMethod]
-        public void TestMethod1()
+        public void FileIsDirectory()
         {
+            File file = new File("moi", null);
+
+            Assert.IsFalse(file.isDirectory());
         }
     }
 }
