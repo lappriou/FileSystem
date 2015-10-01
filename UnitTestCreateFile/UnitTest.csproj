@@ -61,6 +61,7 @@
     <Compile Include="GetPath.cs" />
     <Compile Include="GetRoot.cs" />
     <Compile Include="CheckType.cs" />
+    <Compile Include="Delete.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FileSystem\FileSystem.csproj">
