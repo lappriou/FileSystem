@@ -44,9 +44,5 @@ namespace UnitTestCreateFile
             dossier.chmod(7);
             Assert.AreEqual(dossier.ListFile, 1);
         }
-
-
-
-
     }
 }
