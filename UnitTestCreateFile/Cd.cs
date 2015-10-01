@@ -26,5 +26,17 @@ namespace UnitTestCreateFile
             dossier.createNewFile("hui");
             Assert.AreEqual(dossier.cd("hui"), dossier.ListFile[0]);
         }
+
+        [TestMethod]
+        public void CdByFilee()
+        {
+
+            Directory dossier = new Directory("dossier", null);
+            dossier.chmod(7);
+            dossier.createNewFile("hui");
+            Assert.AreEqual(dossier.ListFile[0].cd("hui"), null);
+        }
+
+
     }
 }
