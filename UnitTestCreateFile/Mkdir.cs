@@ -12,7 +12,7 @@ namespace UnitTestCreateFile
         {
             File file = new File("file", null);
             file.chmod(7);
-            Assert.IsFalse(file.createNewFile("hui"));
+            Assert.IsFalse(file.mkdir("hui"));
         }
 
         [TestMethod]
@@ -20,27 +20,27 @@ namespace UnitTestCreateFile
         {
             Directory dossier = new Directory("dossier", null);
             dossier.chmod(7);
-            Assert.IsTrue(dossier.createNewFile("hui"));
+            Assert.IsTrue(dossier.mkdir("hui"));
         }
 
         public void MkdirByDirectoryNoPermit()
         {
             Directory dossier = new Directory("dossier", null);
-            Assert.IsFalse(dossier.createNewFile("hui"));
+            Assert.IsFalse(dossier.mkdir("hui"));
         }
 
         [TestMethod]
         public void MkdirByDirectoryWithExistName()
         {
             Directory dossier = new Directory("dossier", null);
-            dossier.createNewFile("hui");
-            Assert.IsFalse(dossier.createNewFile("hui"));
+            dossier.mkdir("hui");
+            Assert.IsFalse(dossier.mkdir("hui"));
         }
 
         public void MkdirByDirectoryAddList()
         {
             Directory dossier = new Directory("dossier", null);
-            dossier.createNewFile("hui");
+            dossier.mkdir("hui");
             dossier.chmod(7);
             Assert.AreEqual(dossier.ListFile, 1);
         }
