@@ -25,5 +25,16 @@ namespace UnitTestCreateFile
             Assert.IsFalse(dossier.renameTo("toto", "toto"));
           
         }
+
+        public void RenameToByDirectoryNameExist()
+        {
+            Directory dossier = new Directory("dossier", null);
+            dossier.chmod(7);
+            dossier.createNewFile("hui");
+            dossier.createNewFile("toto");
+            Assert.IsFalse(dossier.renameTo("toto", "hui"));
+        }
+
+
     }
 }
