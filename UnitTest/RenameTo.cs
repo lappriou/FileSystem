@@ -35,6 +35,15 @@ namespace UnitTestCreateFile
             Assert.IsFalse(dossier.renameTo("toto", "hui"));
         }
 
+        public void RenameToByFile()
+        {
+            Directory dossier = new Directory("dossier", null);
+            dossier.chmod(7);
+            dossier.createNewFile("hui");
+            Assert.IsFalse(dossier.ListFile[0].renameTo("toto", "hui"));
+        }
+
+
 
     }
 }
