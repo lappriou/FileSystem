@@ -11,9 +11,19 @@ namespace UnitTestCreateFile
         public void RenameToByDirectory()
         {
             Directory dossier = new Directory("dossier", null);
+            dossier.chmod(7);
             dossier.createNewFile("hui");
             dossier.renameTo("hui", "toto");
-            Assert.AreEqual(dossier.ListFile[0].Name , "toto");
+            Assert.AreEqual("toto", dossier.ListFile[0].Name);
+        }
+
+        public void RenameToByDirectoryFileNotExist()
+        {
+            Directory dossier = new Directory("dossier", null);
+            dossier.chmod(7);
+            dossier.createNewFile("hui");
+            Assert.IsFalse(dossier.renameTo("toto", "toto"));
+          
         }
     }
 }
