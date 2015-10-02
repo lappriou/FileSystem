@@ -63,6 +63,7 @@
     <Compile Include="CheckType.cs" />
     <Compile Include="Delete.cs" />
     <Compile Include="Search.cs" />
+    <Compile Include="Chmod.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FileSystem\FileSystem.csproj">
