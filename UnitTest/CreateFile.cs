@@ -39,6 +39,7 @@ namespace UnitTestCreateFile
             Assert.IsFalse(dossier3.createNewFile("hui"));
         }
 
+        [TestMethod]
         public void CreateNewFileByDirectoryAddList()
         {
             Directory dossier4 = new Directory("dossier", null);

@@ -24,16 +24,17 @@ namespace UnitTestCreateFile
             dossier.chmod(7);
             Assert.IsFalse(dossier.delete("huit"));
         }
-
+        [TestMethod]
         public void DeleteByDirectory()
         {
 
             Directory dossier = new Directory("dossier", null);
-            dossier.mkdir("hui");
             dossier.chmod(7);
+            dossier.mkdir("hui");
+            
             Assert.IsTrue(dossier.delete("hui"));
         }
-
+        [TestMethod]
         public void DeleteByDirectoryDeleteList()
         {
 
@@ -43,7 +44,7 @@ namespace UnitTestCreateFile
             dossier.delete("hui");
             Assert.AreEqual(dossier.ListFile.Count, 0);
         }
-
+        [TestMethod]
         public void DeleteByDirectoryNotPermit()
         {
 

@@ -17,6 +17,7 @@ namespace UnitTestCreateFile
             Assert.AreEqual("toto", dossier.ListFile[0].Name);
         }
 
+        [TestMethod]
         public void RenameToByDirectoryFileNotExist()
         {
             Directory dossier = new Directory("dossier", null);
@@ -26,6 +27,7 @@ namespace UnitTestCreateFile
           
         }
 
+        [TestMethod]
         public void RenameToByDirectoryNameExist()
         {
             Directory dossier = new Directory("dossier", null);
@@ -35,6 +37,7 @@ namespace UnitTestCreateFile
             Assert.IsFalse(dossier.renameTo("toto", "hui"));
         }
 
+        [TestMethod]
         public void RenameToByFile()
         {
             Directory dossier = new Directory("dossier", null);
