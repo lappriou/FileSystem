@@ -43,5 +43,13 @@ namespace UnitTestCreateFile
             dossier.delete("hui");
             Assert.AreEqual(dossier.ListFile.Count, 0);
         }
+
+        public void DeleteByDirectoryNotPermit()
+        {
+
+            Directory dossier = new Directory("dossier", null);
+            dossier.mkdir("hui");
+            Assert.IsFalse(dossier.delete("hui"));
+        }
     }
 }
