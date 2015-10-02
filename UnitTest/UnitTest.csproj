@@ -64,6 +64,7 @@
     <Compile Include="Delete.cs" />
     <Compile Include="Search.cs" />
     <Compile Include="Chmod.cs" />
+    <Compile Include="RenameTo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FileSystem\FileSystem.csproj">
